@@ -46,5 +46,6 @@ Crie uma aplicação web simples com título "RH Pro" para cadastro de profissio
 
 Pense passo a passo: 1) Schema DB. 2) UI/UX. 3) Lógica status. 4) Webhook. 5) Testes. Saída: App Lovable + n8n export + README.
 ```
-Resultado:
+**Resultado**:
+
 <img width="544" height="719" alt="image" src="https://github.com/user-attachments/assets/39bc0d73-95d8-490e-b3ab-e4dca5f4b9f0" />
