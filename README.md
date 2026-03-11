@@ -49,3 +49,11 @@ Pense passo a passo: 1) Schema DB. 2) UI/UX. 3) Lógica status. 4) Webhook. 5) T
 **Resultado**:
 
 <img width="544" height="719" alt="image" src="https://github.com/user-attachments/assets/39bc0d73-95d8-490e-b3ab-e4dca5f4b9f0" />
+
+
+Após o resultado do Lovable, verifiquei que não estava exibindo uma confirmação de saída da tela de cadastro, então pedi novamente para que a IA realizasse a validação e ela retornou o seguinte erro:
+
+<img width="1290" height="471" alt="image" src="https://github.com/user-attachments/assets/fe47f7f4-5429-4e89-97b0-0425dd94f8d0" />
+
+
+
