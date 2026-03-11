@@ -69,10 +69,8 @@ Com isso, cliquei no botão "Try to fix" que apareceu automaticamente e um novo 
 
 **Prompt 3** (0:26)
 ```text
-For the code present, I get the error below.
+Fix these issues
 
-Please think step-by-step in order to resolve it.
-```
 Uncaught Error: useBlocker must be used within a data router.  See https://reactrouter.com/v6/routers/picking-a-router.
 
 {
@@ -84,7 +82,7 @@ Uncaught Error: useBlocker must be used within a data router.  See https://react
   "stack": "Error: useBlocker must be used within a data router.  See https://reactrouter.com/v6/routers/picking-a-router.\n    at invariant (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/react-router-dom.js?v=72bca955:209:11)\n    at useDataRouterContext (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/react-router-dom.js?v=72bca955:4238:17)\n    at useBlocker (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/react-router-dom.js?v=72bca955:4320:7)\n    at Cadastro (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/src/pages/Cadastro.tsx?t=1773250531480:128:21)\n    at renderWithHooks (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:11548:26)\n    at mountIndeterminateComponent (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:14926:21)\n    at beginWork (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:15914:22)\n    at beginWork$1 (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:19753:22)\n    at performUnitOfWork (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:19198:20)\n    at workLoopSync (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:19137:13)",
   "has_blank_screen": true
 }
-```
+
 ```
 
 **Resultado**:
