@@ -88,5 +88,15 @@ Uncaught Error: useBlocker must be used within a data router.  See https://react
 **Resultado** (0:26):
 
 <img width="518" height="323" alt="image" src="https://github.com/user-attachments/assets/dd6c4c61-9de4-45b5-aa6a-6737b74195ae" />
+<br>
+
+Com isso, a validação agora funciona, porém, o mesmo tipo de confirmação de saída é usado quando o usuário clica em salvar, então, especifiquei as mudanças necessárias.
+<br>
+
+**Prompt 4**: 
+```text
+Ok, a validação funciona, porém, a mesma mensagem aparece ao clicar em Salvar. Altere a mensagem exibida apenas ao clicar no botão de salvar para: "Deseja cadastrar o profissional?"
+```
+
 
 
