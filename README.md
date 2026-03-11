@@ -51,7 +51,7 @@ Pense passo a passo: 1) Schema DB. 2) UI/UX. 3) Lógica status. 4) Webhook. 5) T
 <img width="544" height="719" alt="image" src="https://github.com/user-attachments/assets/39bc0d73-95d8-490e-b3ab-e4dca5f4b9f0" />
 
 
-Após o resultado do Lovable, verifiquei que não estava exibindo uma confirmação de saída da tela de cadastro, então pedi novamente para que a IA realizasse a validação e ela retornou um erro:
+Após o resultado do Lovable, foi verificado que não estava exibindo uma confirmação de saída da tela de cadastro, então, foi feito um novo prompt para que a IA realizasse a validação:
 
 **Prompt 2**: 
 ```text
@@ -65,7 +65,7 @@ Crie uma validação na navegação entre a tela de cadastro e a de listagem:
 <img width="1290" height="471" alt="image" src="https://github.com/user-attachments/assets/fe47f7f4-5429-4e89-97b0-0425dd94f8d0" />
 
 
-Com isso, cliquei no botão "Try to fix" que apareceu automaticamente e um novo prompt foi gerado:
+Com isso, o botão "Try to fix" que apareceu automaticamente foi acionado e um novo prompt foi gerado:
 
 **Prompt 3**:
 ```text
@@ -90,8 +90,41 @@ Uncaught Error: useBlocker must be used within a data router.  See https://react
 <img width="518" height="323" alt="image" src="https://github.com/user-attachments/assets/dd6c4c61-9de4-45b5-aa6a-6737b74195ae" />
 <br>
 
-Com isso, a validação agora funciona, porém, o mesmo tipo de confirmação de saída é usado quando o usuário clica em salvar, então, especifiquei as mudanças necessárias.
+A validação agora funciona, porém, o mesmo tipo de confirmação de saída é usado quando o usuário clica em salvar, então, as mudanças necessárias foram especificadas.
 <br>
+
+**Prompt 4**: 
+```text
+Ok, a validação funciona, porém, a mesma mensagem aparece ao clicar em Salvar. Altere a mensagem exibida apenas ao clicar no botão de salvar para: "Deseja cadastrar o profissional?". Faça o mesmo para a tela de editar.
+```
+
+**Resultado** (0:43):
+
+<img width="542" height="268" alt="image" src="https://github.com/user-attachments/assets/a8be7c01-bfb0-42ea-8b03-e2c3f9643a91" />
+<br>
+
+Dessa vez, foi constatado que a verificação duplicada deixou de aparecer, porém, ainda não confirma as ações de cadastro e edição.
+<br>
+
+**Prompt 5**:
+```text
+Ainda não está funcionando corretamente. A confirmação de saída com alterações não salvas é exibida, porém, a confirmação de cadastro/atualização não é exibida.
+
+São duas confirmações diferentes:
+- Confirmar saída da tela com alterações não salvas.
+- Confirmar cadastro/atualização de informações.
+
+A confirmação de apagar o usuário está correta e não precisa ser modificada.
+```
+
+**Resultado**(0:31):
+
+<img width="528" height="276" alt="image" src="https://github.com/user-attachments/assets/5931f098-2acf-42da-9bcf-dbee34595572" />
+
+
+
+
+
 
 
 
