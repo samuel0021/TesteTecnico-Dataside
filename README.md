@@ -93,10 +93,7 @@ Uncaught Error: useBlocker must be used within a data router.  See https://react
 Com isso, a validação agora funciona, porém, o mesmo tipo de confirmação de saída é usado quando o usuário clica em salvar, então, especifiquei as mudanças necessárias.
 <br>
 
-**Prompt 4**: 
-```text
-Ok, a validação funciona, porém, a mesma mensagem aparece ao clicar em Salvar. Altere a mensagem exibida apenas ao clicar no botão de salvar para: "Deseja cadastrar o profissional?"
-```
+
 
 
 
