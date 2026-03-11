@@ -2,7 +2,7 @@
 Documentação dos prompts feitos para a Lovable IA sobre o teste técnico para vaga de Acelera Jovem de DEV na empresa Dataside
 
 **Prompt 1** (4:00): 
-```bash
+```text
 Crie uma aplicação web simples com título "RH Pro" para cadastro de profissionais de uma empresa, otimizada para integração com automação de e-mails via n8n. Faça um design responsivo com azul corporativo (#1245A8) como cor primária e seguindo as 10 heurísticas de Nielsen.
 
 **CONTEXTO E OBJETIVO**:
