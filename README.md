@@ -1,7 +1,7 @@
 # Teste Técnico Dataside
 Documentação dos prompts feitos para a Lovable IA sobre o teste técnico para vaga de Acelera Jovem de DEV na empresa Dataside
 
-**Prompt 1** (4:00): 
+**Prompt 1**: 
 ```markdown
 Crie uma aplicação web simples com título "RH Pro" para cadastro de profissionais de uma empresa, otimizada para integração com automação de e-mails via n8n. Faça um design responsivo com azul corporativo (#1245A8) como cor primária e seguindo as 10 heurísticas de Nielsen.
 
@@ -46,28 +46,28 @@ Crie uma aplicação web simples com título "RH Pro" para cadastro de profissio
 
 Pense passo a passo: 1) Schema DB. 2) UI/UX. 3) Lógica status. 4) Webhook. 5) Testes. Saída: App Lovable + n8n export + README.
 ```
-**Resultado**:
+**Resultado** (4:00):
 
 <img width="544" height="719" alt="image" src="https://github.com/user-attachments/assets/39bc0d73-95d8-490e-b3ab-e4dca5f4b9f0" />
 
 
 Após o resultado do Lovable, verifiquei que não estava exibindo uma confirmação de saída da tela de cadastro, então pedi novamente para que a IA realizasse a validação e ela retornou um erro:
 
-**Prompt 2** (0:47): 
+**Prompt 2**: 
 ```text
 Crie uma validação na navegação entre a tela de cadastro e a de listagem:
 
 - Caso o usuário tente sair da página de cadastro quando há campos preenchidos, exibir uma confirmação de saída
 ```
 
-**Erro**:
+**Resultado** (0:47):
 
 <img width="1290" height="471" alt="image" src="https://github.com/user-attachments/assets/fe47f7f4-5429-4e89-97b0-0425dd94f8d0" />
 
 
 Com isso, cliquei no botão "Try to fix" que apareceu automaticamente e um novo prompt foi gerado:
 
-**Prompt 3** (0:26)
+**Prompt 3**:
 ```text
 Fix these issues
 
@@ -85,7 +85,7 @@ Uncaught Error: useBlocker must be used within a data router.  See https://react
 
 ```
 
-**Resultado**:
+**Resultado** (0:26):
 
 <img width="518" height="323" alt="image" src="https://github.com/user-attachments/assets/dd6c4c61-9de4-45b5-aa6a-6737b74195ae" />
 
