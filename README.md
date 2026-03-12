@@ -5,6 +5,9 @@ Site Lovable: https://rh-pro-dataside.lovable.app
 <br>
 <br>
 
+<img width="1384" height="730" alt="Site" src="https://github.com/user-attachments/assets/8fcc1099-5db6-44cb-a925-432e3d5fc14c" />
+
+
 **Prompt 1**: 
 ```text
 Crie uma aplicação web simples com título "RH Pro" para cadastro de profissionais de uma empresa, otimizada para integração com automação de e-mails via n8n. Faça um design responsivo com azul corporativo (#1245A8) como cor primária e seguindo as 10 heurísticas de Nielsen.
@@ -54,7 +57,7 @@ Pense passo a passo: 1) Schema DB. 2) UI/UX. 3) Lógica status. 4) Webhook. 5) T
 
 **Resultado** (4:00):
 
-<img width="544" height="719" alt="image" src="https://github.com/user-attachments/assets/39bc0d73-95d8-490e-b3ab-e4dca5f4b9f0" />
+<img width="544" height="719" alt="Prompt 1 result" src="https://github.com/user-attachments/assets/39bc0d73-95d8-490e-b3ab-e4dca5f4b9f0" />
 <br>
 <br>
 
@@ -72,7 +75,7 @@ Crie uma validação na navegação entre a tela de cadastro e a de listagem:
 
 **Resultado** (0:47):
 
-<img width="1290" height="471" alt="image" src="https://github.com/user-attachments/assets/fe47f7f4-5429-4e89-97b0-0425dd94f8d0" />
+<img width="1290" height="471" alt="Prompt 2 result" src="https://github.com/user-attachments/assets/fe47f7f4-5429-4e89-97b0-0425dd94f8d0" />
 <br>
 <br>
 
@@ -100,7 +103,7 @@ Uncaught Error: useBlocker must be used within a data router.  See https://react
 
 **Resultado** (0:26):
 
-<img width="518" height="323" alt="image" src="https://github.com/user-attachments/assets/dd6c4c61-9de4-45b5-aa6a-6737b74195ae" />
+<img width="518" height="323" alt="Prompt 3 result" src="https://github.com/user-attachments/assets/dd6c4c61-9de4-45b5-aa6a-6737b74195ae" />
 <br>
 <br>
 
@@ -116,7 +119,7 @@ Ok, a validação funciona, porém, a mesma mensagem aparece ao clicar em Salvar
 
 **Resultado** (0:43):
 
-<img width="542" height="268" alt="image" src="https://github.com/user-attachments/assets/a8be7c01-bfb0-42ea-8b03-e2c3f9643a91" />
+<img width="542" height="268" alt="Prompt 4 result" src="https://github.com/user-attachments/assets/a8be7c01-bfb0-42ea-8b03-e2c3f9643a91" />
 <br>
 <br>
 
@@ -139,7 +142,7 @@ A confirmação de apagar o usuário está correta e não precisa ser modificada
 
 **Resultado**(0:31):
 
-<img width="528" height="276" alt="image" src="https://github.com/user-attachments/assets/5931f098-2acf-42da-9bcf-dbee34595572" />
+<img width="528" height="276" alt="Prompt 5 result" src="https://github.com/user-attachments/assets/5931f098-2acf-42da-9bcf-dbee34595572" />
 <br>
 <br>
 
@@ -158,7 +161,7 @@ Confirmação de atualização de profissional
 
 **Resultado**(1:00):
 
-<img width="497" height="247" alt="image" src="https://github.com/user-attachments/assets/32fcf0f1-dd5d-4c41-a84e-1fcecc48110f" />
+<img width="497" height="247" alt="Prompt 6 result" src="https://github.com/user-attachments/assets/32fcf0f1-dd5d-4c41-a84e-1fcecc48110f" />
 <br>
 <br>
 
@@ -174,7 +177,7 @@ Atualize a lógica de envio no arquivo src/lib/store.ts e insira a seguinte URL 
 
 **Resultado**(0:51):
 
-<img width="481" height="278" alt="image" src="https://github.com/user-attachments/assets/e5f4759b-1baf-4a1b-9f75-c3bf192eb5c4" />
+<img width="481" height="278" alt="Prompt 7 result" src="https://github.com/user-attachments/assets/e5f4759b-1baf-4a1b-9f75-c3bf192eb5c4" />
 <br>
 <br>
 
@@ -198,7 +201,7 @@ Mantenha a URL do webhook e o restante do código intactos, apenas adicione essa
 
 **Resultado**(0:41):
 
-<img width="484" height="313" alt="image" src="https://github.com/user-attachments/assets/d37fd2fc-227c-4724-b71d-de8f1921c4c4" />
+<img width="484" height="313" alt="Prompt 8 result" src="https://github.com/user-attachments/assets/d37fd2fc-227c-4724-b71d-de8f1921c4c4" />
 <br> 
 <br>
 
@@ -208,7 +211,7 @@ Agora o n8n recebe a informação de quando um profissional é cadastrado ou alt
 
 **Fluxo do n8n**:
 
-<img width="1001" height="316" alt="image" src="https://github.com/user-attachments/assets/761b2fb8-dcdf-4658-a360-d17bbbff3747" />
+<img width="1001" height="316" alt="n8n flow" src="https://github.com/user-attachments/assets/761b2fb8-dcdf-4658-a360-d17bbbff3747" />
 <br>
 <br>
 
@@ -221,11 +224,11 @@ O fluxo do n8n percorre todos os usuários cadastrados e verifica quais deles t�
 Testes foram realizados e foi identificado que os emails estão sendo enviados corretamente.
 <br>
 
-<img width="1378" height="368" alt="image" src="https://github.com/user-attachments/assets/521303ed-223f-48b9-9610-9866703dc837" />
+<img width="1378" height="368" alt="Email sent" src="https://github.com/user-attachments/assets/521303ed-223f-48b9-9610-9866703dc837" />
 (Email enviado automaticamente)
 <br>
 <br>
-<img width="510" height="500" alt="image" src="https://github.com/user-attachments/assets/27a4f7b3-0e7f-4ef3-88d2-d106c66a4c89" />
+<img width="510" height="500" alt="Email recieved" src="https://github.com/user-attachments/assets/27a4f7b3-0e7f-4ef3-88d2-d106c66a4c89" />
 <br>
 (Email recebido)
 <br>
@@ -240,7 +243,7 @@ Substitua a cor primária do site passada inicialmente para #0074ff. Substitua t
 <br>
 
 **Resultado**(0:33):
-<img width="497" height="255" alt="image" src="https://github.com/user-attachments/assets/2168711b-4b4a-44b5-84f5-25d601937c52" />
+<img width="497" height="255" alt="Prompt 9 result" src="https://github.com/user-attachments/assets/2168711b-4b4a-44b5-84f5-25d601937c52" />
 <br>
 <br>
 
