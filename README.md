@@ -59,6 +59,7 @@ Pense passo a passo: 1) Schema DB. 2) UI/UX. 3) Lógica status. 4) Webhook. 5) T
 Após o resultado do Lovable, foi verificado que não estava exibindo uma confirmação de saída da tela de cadastro, então, foi feito um novo prompt para que a IA realizasse a validação:
 <br>
 
+
 **Prompt 2**: 
 ```text
 Crie uma validação na navegação entre a tela de cadastro e a de listagem:
