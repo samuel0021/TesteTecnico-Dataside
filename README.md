@@ -145,6 +145,7 @@ A confirmação de apagar o usuário está correta e não precisa ser modificada
 
 Mesmo após essa solicitação, o Lovable ainda não estava conseguindo separar as duas telas de confirmações distintas, então, foi pedido para que ignorasse a confirmação de saída com alterações não salvas e fizesse apenas a confirmação de cadastro/edição.
 <br>
+<br>
 
 **Prompt 6**:
 ```text
