@@ -46,12 +46,15 @@ Crie uma aplicação web simples com título "RH Pro" para cadastro de profissio
 
 Pense passo a passo: 1) Schema DB. 2) UI/UX. 3) Lógica status. 4) Webhook. 5) Testes. Saída: App Lovable + n8n export + README.
 ```
+<br>
+
 **Resultado** (4:00):
 
 <img width="544" height="719" alt="image" src="https://github.com/user-attachments/assets/39bc0d73-95d8-490e-b3ab-e4dca5f4b9f0" />
-
+<br>
 
 Após o resultado do Lovable, foi verificado que não estava exibindo uma confirmação de saída da tela de cadastro, então, foi feito um novo prompt para que a IA realizasse a validação:
+<br>
 
 **Prompt 2**: 
 ```text
@@ -59,13 +62,15 @@ Crie uma validação na navegação entre a tela de cadastro e a de listagem:
 
 - Caso o usuário tente sair da página de cadastro quando há campos preenchidos, exibir uma confirmação de saída
 ```
+<br>
 
 **Resultado** (0:47):
 
 <img width="1290" height="471" alt="image" src="https://github.com/user-attachments/assets/fe47f7f4-5429-4e89-97b0-0425dd94f8d0" />
-
+<br>
 
 Com isso, o botão "Try to fix" que apareceu automaticamente foi acionado e um novo prompt foi gerado:
+<br>
 
 **Prompt 3**:
 ```text
@@ -82,8 +87,8 @@ Uncaught Error: useBlocker must be used within a data router.  See https://react
   "stack": "Error: useBlocker must be used within a data router.  See https://reactrouter.com/v6/routers/picking-a-router.\n    at invariant (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/react-router-dom.js?v=72bca955:209:11)\n    at useDataRouterContext (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/react-router-dom.js?v=72bca955:4238:17)\n    at useBlocker (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/react-router-dom.js?v=72bca955:4320:7)\n    at Cadastro (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/src/pages/Cadastro.tsx?t=1773250531480:128:21)\n    at renderWithHooks (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:11548:26)\n    at mountIndeterminateComponent (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:14926:21)\n    at beginWork (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:15914:22)\n    at beginWork$1 (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:19753:22)\n    at performUnitOfWork (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:19198:20)\n    at workLoopSync (https://c9649e96-ef8f-4c5c-89a7-cc04706ff6cb.lovableproject.com/node_modules/.vite/deps/chunk-T2SWDQEL.js?v=0c37c803:19137:13)",
   "has_blank_screen": true
 }
-
 ```
+<br>
 
 **Resultado** (0:26):
 
@@ -97,6 +102,7 @@ A validação agora funciona, porém, o mesmo tipo de confirmação de saída é
 ```text
 Ok, a validação funciona, porém, a mesma mensagem aparece ao clicar em Salvar. Altere a mensagem exibida apenas ao clicar no botão de salvar para: "Deseja cadastrar o profissional?". Faça o mesmo para a tela de editar.
 ```
+<br>
 
 **Resultado** (0:43):
 
@@ -116,6 +122,7 @@ São duas confirmações diferentes:
 
 A confirmação de apagar o usuário está correta e não precisa ser modificada.
 ```
+<br>
 
 **Resultado**(0:31):
 
@@ -132,6 +139,7 @@ Ignore a confirmação de saída da tela sem salvar as alterações e deixe apen
 Confirmação de cadastro de profissional
 Confirmação de atualização de profissional
 ```
+<br>
 
 **Resultado**(1:00):
 
@@ -144,6 +152,7 @@ Agora a confirmação funciona corretamente, o próximo passo é alterar o link 
 ```text
 Atualize a lógica de envio no arquivo src/lib/store.ts e insira a seguinte URL real para o disparo do Webhook (POST) ao cadastrar um novo profissional: [https://samuelvieira21.app.n8n.cloud/webhook-test/novo-profissional]. Certifique-se de que a aplicação não quebre se o webhook falhar.
 ```
+<br>
 
 **Resultado**(0:51):
 
@@ -165,6 +174,7 @@ Na função updateProfissional: Pensando na regra de negócio, se editarmos um p
 
 Mantenha a URL do webhook e o restante do código intactos, apenas adicione essas chamadas de notificação.
 ```
+<br>
 
 **Resultado**(0:41):
 
@@ -177,6 +187,7 @@ Agora o n8n recebe a informação de quando um profissional é cadastrado ou alt
 **Fluxo do n8n**:
 
 <img width="1001" height="316" alt="image" src="https://github.com/user-attachments/assets/761b2fb8-dcdf-4658-a360-d17bbbff3747" />
+<br>
 
 Arquivo JSON do n8n: [RH Pro - Verificacao Diaria.json](https://github.com/samuel0021/TesteTecnico-Dataside/blob/main/RH%20Pro%20-%20Verificacao%20Diaria.json)
 
