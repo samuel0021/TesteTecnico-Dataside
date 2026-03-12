@@ -44,7 +44,6 @@ Crie uma aplicação web simples com título "RH Pro" para cadastro de profissio
 - Trigger para n8n: Verificação diária de profissionais onde DataVencimento - hoje = 5 dias.
 - Template de email: "Aviso: O contrato no nome de [Nome] vence em 5 dias ([DataVencimento]). Ação: Renovar? | Equipe RH".
 
-
 **DOCUMENTAÇÃO E SETUP** (gere como README.md)**:
 1. Deploy: Link Lovable.
 2. n8n workflow JSON: [simule com 3 profissionais de teste: João TI 2026-03-16 vencimento, etc.].
@@ -75,6 +74,41 @@ Notei que ao clicar em editar um usuário, a data de vencimento cai em 1 dia. Fa
 **Resultado** (0:25):
 
 <img width="499" height="279" alt="image" src="https://github.com/user-attachments/assets/d874d3cb-9bdb-4325-b1a0-7d9cc5bf19ef" />
+<br>
+<br>
+
+<br>
+Testes realizados e o erro em questão foi corrigido, porém, foi identificado que a confirmação de saída sem salvar especificada no primeiro prompt não estava sendo aplicada. Um novo prompt foi realizado solicitando a correção.
+<br>
+<br>
+
+**Prompt 3**:
+```text
+O sistema possui confirmação de cadastro e atualização de usuários. Sem modificar essas confirmações, adicione outra que consiste em:
+Na tela de cadastro e edição, ao clicar em cancelar ou navegar pelo menu superior, exibir uma confirmação de saída caso hajam dados preenchidos que não foram salvos.
+```
+<br>
+
+**Resultado**(1:00):
+
+<img width="527" height="296" alt="image" src="https://github.com/user-attachments/assets/2d4abc46-7cf1-4af0-b1c0-64d4980c9c16" />
+<br>
+<br>
+
+<br>
+Após testes, foi identificado que a confirmação de saída sem salvar estava em funcionamento, porém, estava sendo exibida na tela de edição mesmo após salvar as alterações. Um novo prompt foi gerado especificando o caso e solicitando a correção.
+<br>
+<br>
+
+**Prompt 4**:
+```text
+Notei que, na tela de editar, ao clicar em atualizar a tela de confirmação é exibida corretamente, porém, logo em seguida é exibida a confirmação de saída sem salvar. Faça a correção para que seja exibida somente a tela do caso especificado
+```
+<br>
+
+**Resultado**(0:42):
+
+<img width="528" height="369" alt="image" src="https://github.com/user-attachments/assets/0468bc47-0284-42fb-a817-6c688267a338" />
 <br>
 <br>
 
@@ -142,7 +176,7 @@ Por fim, o n8n pega os usuários que foram filtrados e envia um email automatica
 Por fim, um último prompt foi realizado no Lovable para melhorar o estilo do site.
 <br>
 
-**Prompt 3**:
+**Prompt 5**:
 ```text
 Substitua a cor primária do site passada inicialmente para #0074ff. Substitua também a fonte padrão do site para Poppins Semibold.
 ```
