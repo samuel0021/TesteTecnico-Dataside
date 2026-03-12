@@ -226,6 +226,7 @@ Testes foram realizados e foi identificado que os emails estão sendo enviados c
 <br>
 <br>
 <img width="510" height="500" alt="image" src="https://github.com/user-attachments/assets/27a4f7b3-0e7f-4ef3-88d2-d106c66a4c89" />
+<br>
 (Email recebido)
 
 
