@@ -138,16 +138,18 @@ Por fim, o n8n pega os usuários que foram filtrados e envia um email automatica
 <br>
 <br>
 <br>
-Após isso, um novo prompt foi realizado no Lovable para melhorar o estilo do site.
 
-**Prompt 2**:
+Após isso, um novo prompt foi realizado no Lovable para melhorar o estilo do site.
+<br>
+
+**Prompt 3**:
 ```text
 Substitua a cor primária do site passada inicialmente para #0074ff. Substitua também a fonte padrão do site para Poppins Semibold.
 ```
 <br>
 
 **Resultado**(0:33):
-<img width="497" height="255" alt="Prompt 2 result" src="https://github.com/user-attachments/assets/2168711b-4b4a-44b5-84f5-25d601937c52" />
+<img width="497" height="255" alt="Prompt 3 result" src="https://github.com/user-attachments/assets/2168711b-4b4a-44b5-84f5-25d601937c52" />
 <br>
 <br>
 
