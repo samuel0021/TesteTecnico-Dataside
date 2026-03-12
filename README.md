@@ -120,11 +120,65 @@ A confirmação de apagar o usuário está correta e não precisa ser modificada
 **Resultado**(0:31):
 
 <img width="528" height="276" alt="image" src="https://github.com/user-attachments/assets/5931f098-2acf-42da-9bcf-dbee34595572" />
+<br>
 
+Mesmo após essa solicitação, o Lovable ainda não estava conseguindo separar as duas telas de confirmações distintas, então, foi pedido para que ignorasse a confirmação de saída com alterações não salvas e fizesse apenas a confirmação de cadastro/edição.
+<br>
 
+**Prompt 6**:
+```text
+Ignore a confirmação de saída da tela sem salvar as alterações e deixe apenas as seguintes:
 
+Confirmação de cadastro de profissional
+Confirmação de atualização de profissional
+```
 
+**Resultado**(1:00):
 
+<img width="497" height="247" alt="image" src="https://github.com/user-attachments/assets/32fcf0f1-dd5d-4c41-a84e-1fcecc48110f" />
+<br>
+
+Agora a confirmação funciona corretamente, o próximo passo é alterar o link do webhook em src/lib/store.ts.
+
+**Prompt 7**
+```text
+Atualize a lógica de envio no arquivo src/lib/store.ts e insira a seguinte URL real para o disparo do Webhook (POST) ao cadastrar um novo profissional: [https://samuelvieira21.app.n8n.cloud/webhook-test/novo-profissional]. Certifique-se de que a aplicação não quebre se o webhook falhar.
+```
+
+**Resultado**(0:51):
+
+<img width="481" height="278" alt="image" src="https://github.com/user-attachments/assets/e5f4759b-1baf-4a1b-9f75-c3bf192eb5c4" />
+<br>
+
+Após o resultado, ainda não estava chegando nenhuma informação no n8n. Foi identificado que existia uma função *enviarWebhook*, porém, ela não era chamada nas funções *saveProfissional* e *updateProfissional*. Um novo prompt foi gerado especificando essas informações.
+<br>
+
+**Prompt 8**:
+```text
+Analise o arquivo onde estão as funções de banco de dados (src/lib/store.ts). Eu notei que a função enviarWebhook existe e está com a URL correta do n8n, mas ela nunca é chamada durante as ações do usuário.
+
+Preciso que você atualize duas funções para integrar com esse webhook:
+
+Na função saveProfissional: Logo após inserir os dados no Supabase e mapear o resultado com o mapFromDb, chame a função passando os dados (ex: await enviarWebhook(profissionalSalvo)) antes de retornar o resultado.
+
+Na função updateProfissional: Pensando na regra de negócio, se editarmos um profissional para renovar o contrato, o sistema externo também precisa saber. Logo após o update no Supabase dar sucesso e mapear o resultado, adicione a chamada (ex: await enviarWebhook(profissionalAtualizado)) antes do return.
+
+Mantenha a URL do webhook e o restante do código intactos, apenas adicione essas chamadas de notificação.
+```
+
+**Resultado**(0:41):
+
+<img width="484" height="313" alt="image" src="https://github.com/user-attachments/assets/d37fd2fc-227c-4724-b71d-de8f1921c4c4" />
+<br> 
+
+Agora o n8n recebe a informação de quando um profissional é cadastrado ou alterado. Com essa confirmação realizada, foi possível criar a automação do email para profissionais que terão o contrato vencido em 5 dias.
+<br>
+
+**Fluxo do n8n**:
+
+<img width="1001" height="316" alt="image" src="https://github.com/user-attachments/assets/761b2fb8-dcdf-4658-a360-d17bbbff3747" />
+
+Arquivo JSON do n8n: [RH Pro - Verificacao Diaria](caminho/relativo/para/arquivo)
 
 
 
