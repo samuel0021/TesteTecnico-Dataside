@@ -2,6 +2,8 @@
 Documentação dos prompts feitos para a Lovable IA sobre o teste técnico para vaga de Acelera Jovem de DEV na empresa Dataside
 
 Site Lovable: https://rh-pro-dataside.lovable.app
+<br>
+<br>
 
 **Prompt 1**: 
 ```text
