@@ -72,8 +72,10 @@ Crie uma validação na navegação entre a tela de cadastro e a de listagem:
 
 <img width="1290" height="471" alt="image" src="https://github.com/user-attachments/assets/fe47f7f4-5429-4e89-97b0-0425dd94f8d0" />
 <br>
+<br>
 
 Com isso, o botão "Try to fix" que apareceu automaticamente foi acionado e um novo prompt foi gerado:
+<br>
 <br>
 
 **Prompt 3**:
@@ -98,8 +100,10 @@ Uncaught Error: useBlocker must be used within a data router.  See https://react
 
 <img width="518" height="323" alt="image" src="https://github.com/user-attachments/assets/dd6c4c61-9de4-45b5-aa6a-6737b74195ae" />
 <br>
+<br>
 
 A validação agora funciona, porém, o mesmo tipo de confirmação de saída é usado quando o usuário clica em salvar, então, as mudanças necessárias foram especificadas.
+<br>
 <br>
 
 **Prompt 4**: 
@@ -112,8 +116,10 @@ Ok, a validação funciona, porém, a mesma mensagem aparece ao clicar em Salvar
 
 <img width="542" height="268" alt="image" src="https://github.com/user-attachments/assets/a8be7c01-bfb0-42ea-8b03-e2c3f9643a91" />
 <br>
+<br>
 
 Dessa vez, foi constatado que a verificação duplicada deixou de aparecer, porém, ainda não confirma as ações de cadastro e edição.
+<br>
 <br>
 
 **Prompt 5**:
@@ -127,10 +133,12 @@ São duas confirmações diferentes:
 A confirmação de apagar o usuário está correta e não precisa ser modificada.
 ```
 <br>
+<br>
 
 **Resultado**(0:31):
 
 <img width="528" height="276" alt="image" src="https://github.com/user-attachments/assets/5931f098-2acf-42da-9bcf-dbee34595572" />
+<br>
 <br>
 
 Mesmo após essa solicitação, o Lovable ainda não estava conseguindo separar as duas telas de confirmações distintas, então, foi pedido para que ignorasse a confirmação de saída com alterações não salvas e fizesse apenas a confirmação de cadastro/edição.
@@ -149,8 +157,11 @@ Confirmação de atualização de profissional
 
 <img width="497" height="247" alt="image" src="https://github.com/user-attachments/assets/32fcf0f1-dd5d-4c41-a84e-1fcecc48110f" />
 <br>
+<br>
 
 Agora a confirmação funciona corretamente, o próximo passo é alterar o link do webhook em src/lib/store.ts.
+<br>
+<br>
 
 **Prompt 7**
 ```text
@@ -162,8 +173,10 @@ Atualize a lógica de envio no arquivo src/lib/store.ts e insira a seguinte URL 
 
 <img width="481" height="278" alt="image" src="https://github.com/user-attachments/assets/e5f4759b-1baf-4a1b-9f75-c3bf192eb5c4" />
 <br>
+<br>
 
 Após o resultado, ainda não estava chegando nenhuma informação no n8n. Foi identificado que existia uma função *enviarWebhook*, porém, ela não era chamada nas funções *saveProfissional* e *updateProfissional*. Um novo prompt foi gerado especificando essas informações.
+<br>
 <br>
 
 **Prompt 8**:
@@ -184,18 +197,20 @@ Mantenha a URL do webhook e o restante do código intactos, apenas adicione essa
 
 <img width="484" height="313" alt="image" src="https://github.com/user-attachments/assets/d37fd2fc-227c-4724-b71d-de8f1921c4c4" />
 <br> 
-
+<br>
 
 Agora o n8n recebe a informação de quando um profissional é cadastrado ou alterado. Com essa confirmação realizada, foi possível criar a automação do email para profissionais que terão o contrato vencido em 5 dias.
 <br>
-
+<br>
 
 **Fluxo do n8n**:
 
 <img width="1001" height="316" alt="image" src="https://github.com/user-attachments/assets/761b2fb8-dcdf-4658-a360-d17bbbff3747" />
 <br>
+<br>
 
 Arquivo JSON do n8n: [RH Pro - Verificacao Diaria.json](https://github.com/samuel0021/TesteTecnico-Dataside/blob/main/RH%20Pro%20-%20Verificacao%20Diaria.json)
+<br>
 <br>
 
 O fluxo do n8n percorre todos os usuários cadastrados e verifica quais deles têm o vencimento do contrato em 5 dias. Esse fluxo dispara às 8:00am com intervalos de 1 dia.
