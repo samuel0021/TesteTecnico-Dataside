@@ -139,7 +139,7 @@ Por fim, o n8n pega os usuários que foram filtrados e envia um email automatica
 <br>
 <br>
 
-Após isso, um novo prompt foi realizado no Lovable para melhorar o estilo do site.
+Por fim, um último prompt foi realizado no Lovable para melhorar o estilo do site.
 <br>
 
 **Prompt 3**:
