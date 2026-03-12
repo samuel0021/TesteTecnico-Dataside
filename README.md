@@ -228,8 +228,20 @@ Testes foram realizados e foi identificado que os emails estão sendo enviados c
 <img width="510" height="500" alt="image" src="https://github.com/user-attachments/assets/27a4f7b3-0e7f-4ef3-88d2-d106c66a4c89" />
 <br>
 (Email recebido)
+<br>
+<br>
+<br>
+Após isso, um novo prompt foi realizado para alterar o estilo do site.
 
+**Prompt 9**:
+```text
+Substitua a cor primária do site passada inicialmente para #0074ff. Substitua também a fonte padrão do site para Poppins Semibold.
+```
+<br>
 
-
+**Resultado**(0:33):
+<img width="497" height="255" alt="image" src="https://github.com/user-attachments/assets/2168711b-4b4a-44b5-84f5-25d601937c52" />
+<br>
+<br>
 
 
