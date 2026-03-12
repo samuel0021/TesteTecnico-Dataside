@@ -1,0 +1,134 @@
+{
+  "name": "RH Pro - Verificação Diária",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 8
+            }
+          ]
+        }
+      },
+      "id": "3fd24ee9-f970-4034-bbb0-a78b5b3a3704",
+      "name": "Verificação Diária (8h)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -688,
+        -208
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "profissionais",
+        "returnAll": true
+      },
+      "id": "56d9acda-186f-4971-adec-d745858df190",
+      "name": "Buscar no Supabase",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -464,
+        -208
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "TyQQUMHESmC8NjaV",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Calcula a data exata de hoje + 5 dias\nconst hoje = new Date();\nhoje.setHours(0,0,0,0);\nconst dataAlvo = new Date(hoje);\ndataAlvo.setDate(hoje.getDate() + 5);\n\n// Formata para o padrão do banco (YYYY-MM-DD)\nconst targetString = dataAlvo.toISOString().split('T')[0];\n\n// Filtra apenas quem vence EXATAMENTE nessa data\nreturn $input.all().filter(item => item.json.data_vencimento === targetString);"
+      },
+      "id": "14c35622-b391-4e3d-8d15-0886c725a963",
+      "name": "Filtrar Vencimento em 5 Dias",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -256,
+        -208
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "spvieira013@gmail.com",
+        "toEmail": "={{ $json.email }}",
+        "subject": "=Aviso de vencimento de contrato",
+        "text": "={{ 'Olá, ' + $json.nome + '! \\n\\nEste é um aviso automático do sistema RH Pro. O seu contrato atual (Departamento: ' + $json.departamento + ') tem vencimento programado para o dia ' + $json.data_vencimento + '.\\n\\nPor favor, procure o departamento de RH para as tratativas de renovação.\\n\\nAtenciosamente,\\nEquipe de Recursos Humanos' }}",
+        "options": {}
+      },
+      "id": "4c882663-d4d3-4464-abb9-d30211074664",
+      "name": "Enviar Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [
+        -32,
+        -208
+      ],
+      "webhookId": "db03c258-096d-41e5-b7d8-46a394822b3f",
+      "credentials": {
+        "smtp": {
+          "id": "0vA5cuAmLg9RvZ7c",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Verificação Diária (8h)": {
+      "main": [
+        [
+          {
+            "node": "Buscar no Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Buscar no Supabase": {
+      "main": [
+        [
+          {
+            "node": "Filtrar Vencimento em 5 Dias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtrar Vencimento em 5 Dias": {
+      "main": [
+        [
+          {
+            "node": "Enviar Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": -1
+  },
+  "versionId": "12a648c1-8f3d-476c-afac-eab302cd524f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ede1a992fc2d412db2c901c4e5e62d7d3440fe39ac9a9045a89b5e11d544c789"
+  },
+  "id": "9m0kyPh80lgBGAkI",
+  "tags": []
+}
