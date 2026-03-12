@@ -218,6 +218,16 @@ Arquivo JSON do n8n: [RH Pro - Verificacao Diaria.json](https://github.com/samue
 
 O fluxo do n8n percorre todos os usuários cadastrados e verifica quais deles têm o vencimento do contrato em 5 dias. Esse fluxo dispara às 8:00am com intervalos de 1 dia.
 
+Testes foram realizados e foi identificado que os emails estão sendo enviados corretamente.
+<br>
+
+<img width="1378" height="368" alt="image" src="https://github.com/user-attachments/assets/521303ed-223f-48b9-9610-9866703dc837" />
+(Email enviado automaticamente)
+<br>
+<img width="1080" height="1049" alt="image" src="https://github.com/user-attachments/assets/27a4f7b3-0e7f-4ef3-88d2-d106c66a4c89" />
+(Email recebido)
+
+
 
 
 
