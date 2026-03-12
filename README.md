@@ -183,6 +183,7 @@ Substitua a cor primária do site passada inicialmente para #0074ff. Substitua t
 <br>
 
 **Resultado**(0:33):
+
 <img width="497" height="255" alt="Prompt 3 result" src="https://github.com/user-attachments/assets/2168711b-4b4a-44b5-84f5-25d601937c52" />
 <br>
 <br>
