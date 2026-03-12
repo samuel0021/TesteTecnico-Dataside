@@ -27,7 +27,7 @@ Crie uma aplicação web simples com título "RH Pro" para cadastro de profissio
 - Departamento (select: TI, RH, Financeiro, Vendas, Outro).
 - DataInicio (data).
 - DataVencimento (data > DataInicio).
-- Status (calculado: "Ativo" se hoje < vencimento - 5dias; "Aviso" se = 5dias; "Vencido" se > vencimento).
+- Status (calculado: "Ativo" se hoje < vencimento - 5 dias; "Aviso" se = 5dias; "Vencido" se > vencimento).
 
 **TELAS E NAVEGAÇÃO** (barra superior: Logo | Cadastro | Listagem)**:
 1. /cadastro: Formulário validado:
