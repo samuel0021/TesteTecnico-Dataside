@@ -78,21 +78,25 @@ Arquivo JSON do n8n: [RH Pro - Verificacao Diaria.json](https://github.com/samue
 <br>
 
 O fluxo é um nó de Schedule Trigger que dispara às 8:00am com intervalos de 1 dia.
+<br>
 <img width="482" height="554" alt="image" src="https://github.com/user-attachments/assets/1da48e98-617f-4934-a71d-089093e58649" />
 <br>
 <br>
 
 Ele faz uma busca no supabase e retorna todos os profissionais cadastrados no banco.
+<br>
 <img width="1825" height="814" alt="image" src="https://github.com/user-attachments/assets/c95b2609-0106-4b97-bbc9-78fa106e34de" />
 <br>
 <br>
 
 O n8n então recebe os dados do banco e, utilizando um script de JavaScript, separa apenas os que faltam 5 dias para vencer o contrato.
+<br>
 <img width="626" height="311" alt="image" src="https://github.com/user-attachments/assets/a47fc029-efb7-4d3a-a811-958ac45f2798" />
 <br>
 <br>
 
 Por fim, o n8n pega os usuários que foram filtrados e envia um email automaticamente para o email do profissional cadastrado.
+<br>
 <img width="1834" height="846" alt="image" src="https://github.com/user-attachments/assets/2d6ee96c-fafe-4973-8d03-ae645c90dd61" />
 <br>
 <br>
@@ -108,7 +112,7 @@ Por fim, o n8n pega os usuários que foram filtrados e envia um email automatica
 <br>
 <br>
 <br>
-Após isso, um novo prompt foi realizado no Lovable para alterar o estilo do site.
+Após isso, um novo prompt foi realizado no Lovable para melhorar o estilo do site.
 
 **Prompt 2**:
 ```text
