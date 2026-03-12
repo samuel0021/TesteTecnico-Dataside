@@ -6,7 +6,8 @@ Site Lovable: https://rh-pro-dataside.lovable.app
 <br>
 
 <img width="1384" height="730" alt="Site" src="https://github.com/user-attachments/assets/8fcc1099-5db6-44cb-a925-432e3d5fc14c" />
-
+<br>
+<br>
 
 **Prompt 1**: 
 ```text
