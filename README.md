@@ -61,11 +61,21 @@ Pense passo a passo: 1) Schema DB. 2) UI/UX. 3) Lógica status. 4) Testes. Saíd
 <br>
 <br>
 
-A conexão com o n8n foi realizada utilizando as informações no .env que o Lovable gerou
+Ao realizar alguns testes, foi identificado que, ao clicar em editar um usuário, a data de vencimento caía em 1 dia. Um novo prompt foi gerado solicitando a correção do erro.
+
+**Prompt 2**:
+```text
+Notei que ao clicar em editar um usuário, a data de vencimento cai em 1 dia. Faça a correção nessa parte do código para que a data permaneça a mesma.
+```
+<br>
+
+**Resultado** (0:25):
+
+<img width="499" height="279" alt="image" src="https://github.com/user-attachments/assets/d874d3cb-9bdb-4325-b1a0-7d9cc5bf19ef" />
 <br>
 <br>
-<img width="625" height="68" alt="image" src="https://github.com/user-attachments/assets/1b870e7b-4518-43ed-a90b-dab65c80a17e" /><br>
-<br>
+
+Testes realizados e o erro foi corrigido.
 
 **Fluxo do n8n**:
 
@@ -77,7 +87,14 @@ Arquivo JSON do n8n: [RH Pro - Verificacao Diaria.json](https://github.com/samue
 <br>
 <br>
 
+A conexão com o n8n foi realizada utilizando as informações no .env que o Lovable gerou
+<br>
+<br>
+<img width="625" height="68" alt="image" src="https://github.com/user-attachments/assets/1b870e7b-4518-43ed-a90b-dab65c80a17e" /><br>
+<br>
+
 O fluxo é um nó de Schedule Trigger que dispara às 8:00am com intervalos de 1 dia.
+<br>
 <br>
 <img width="482" height="554" alt="image" src="https://github.com/user-attachments/assets/1da48e98-617f-4934-a71d-089093e58649" />
 <br>
@@ -85,17 +102,20 @@ O fluxo é um nó de Schedule Trigger que dispara às 8:00am com intervalos de 1
 
 Ele faz uma busca no supabase e retorna todos os profissionais cadastrados no banco.
 <br>
+<br>
 <img width="1825" height="814" alt="image" src="https://github.com/user-attachments/assets/c95b2609-0106-4b97-bbc9-78fa106e34de" />
 <br>
 <br>
 
 O n8n então recebe os dados do banco e, utilizando um script de JavaScript, separa apenas os que faltam 5 dias para vencer o contrato.
 <br>
+<br>
 <img width="626" height="311" alt="image" src="https://github.com/user-attachments/assets/a47fc029-efb7-4d3a-a811-958ac45f2798" />
 <br>
 <br>
 
 Por fim, o n8n pega os usuários que foram filtrados e envia um email automaticamente para o email do profissional cadastrado.
+<br>
 <br>
 <img width="1834" height="846" alt="image" src="https://github.com/user-attachments/assets/2d6ee96c-fafe-4973-8d03-ae645c90dd61" />
 <br>
