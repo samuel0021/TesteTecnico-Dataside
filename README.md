@@ -178,7 +178,7 @@ Agora o n8n recebe a informação de quando um profissional é cadastrado ou alt
 
 <img width="1001" height="316" alt="image" src="https://github.com/user-attachments/assets/761b2fb8-dcdf-4658-a360-d17bbbff3747" />
 
-Arquivo JSON do n8n: [RH Pro - Verificacao Diaria](caminho/relativo/para/arquivo)
+Arquivo JSON do n8n: [RH Pro - Verificacao Diaria](RH Pro - Verificacao Diaria.json)
 
 
 
