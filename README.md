@@ -61,7 +61,10 @@ Pense passo a passo: 1) Schema DB. 2) UI/UX. 3) Lógica status. 4) Testes. Saíd
 <br>
 <br>
 
+<br>
 Ao realizar alguns testes, foi identificado que, ao clicar em editar um usuário, a data de vencimento caía em 1 dia. Um novo prompt foi gerado solicitando a correção do erro.
+<br>
+<br>
 
 **Prompt 2**:
 ```text
