@@ -1,6 +1,8 @@
 # Teste Técnico Dataside
 Documentação dos prompts feitos para a Lovable IA sobre o teste técnico para vaga de Acelera Jovem de DEV na empresa Dataside
 
+Site Lovable: https://rh-pro-dataside.lovable.app
+
 **Prompt 1**: 
 ```text
 Crie uma aplicação web simples com título "RH Pro" para cadastro de profissionais de uma empresa, otimizada para integração com automação de e-mails via n8n. Faça um design responsivo com azul corporativo (#1245A8) como cor primária e seguindo as 10 heurísticas de Nielsen.
@@ -182,8 +184,10 @@ Mantenha a URL do webhook e o restante do código intactos, apenas adicione essa
 <img width="484" height="313" alt="image" src="https://github.com/user-attachments/assets/d37fd2fc-227c-4724-b71d-de8f1921c4c4" />
 <br> 
 
+
 Agora o n8n recebe a informação de quando um profissional é cadastrado ou alterado. Com essa confirmação realizada, foi possível criar a automação do email para profissionais que terão o contrato vencido em 5 dias.
 <br>
+
 
 **Fluxo do n8n**:
 
@@ -191,7 +195,9 @@ Agora o n8n recebe a informação de quando um profissional é cadastrado ou alt
 <br>
 
 Arquivo JSON do n8n: [RH Pro - Verificacao Diaria.json](https://github.com/samuel0021/TesteTecnico-Dataside/blob/main/RH%20Pro%20-%20Verificacao%20Diaria.json)
+<br>
 
+O fluxo do n8n percorre todos os usuários cadastrados e verifica quais deles têm o vencimento do contrato em 5 dias. Esse fluxo dispara às 8:00am com intervalos de 1 dia.
 
 
 
